@@ -1,0 +1,270 @@
+/* 通用樣式 */
+body {
+    font-family: '微軟正黑體', 'Microsoft JhengHei', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* 深色背景 */
+    color: #f0f0f0; /* 淺色文字 */
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* 導航欄樣式 */
+.navbar {
+    background-color: #2a2a2a; /* 導航欄背景 */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* 左右對齊 */
+    align-items: center; /* 垂直居中 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: #4CAF50; /* 綠色 Logo */
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.main-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-menu li {
+    margin-right: 25px;
+}
+
+.main-menu a {
+    color: #f0f0f0;
+    font-size: 16px;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.main-menu a:hover {
+    color: #007bff; /* 懸停變藍 */
+    text-decoration: none;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #3a3a3a;
+    border-radius: 5px;
+    overflow: hidden; /* 防止內容溢出圓角 */
+    margin-right: 15px;
+}
+
+.search-box input {
+    border: none;
+    padding: 8px 10px;
+    background-color: transparent;
+    color: #f0f0f0;
+    outline: none;
+    width: 180px; /* 搜尋框寬度 */
+}
+
+.search-box button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: #0056b3;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+.btn-icon {
+    color: #f0f0f0;
+    font-size: 20px;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.btn-icon:hover {
+    color: #007bff;
+}
+
+/* 內容區塊樣式 */
+.news-section {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.news-section h2 {
+    color: #f0f0f0;
+    margin-top: 0;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    font-size: 26px;
+}
+
+.news-grid {
+    display: grid; /* 使用 CSS Grid 布局 */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 自動調整列數 */
+    gap: 20px; /* 卡片間距 */
+}
+
+.news-card {
+    background-color: #3a3a3a;
+    border-radius: 8px;
+    overflow: hidden; /* 隱藏超出邊界的內容，確保圖片圓角 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px); /* 懸停時輕微上浮 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px; /* 固定圖片高度 */
+    object-fit: cover; /* 保持圖片比例並填充 */
+    display: block;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    color: #f0f0f0;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.card-content .meta {
+    color: #bbb;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* 限制顯示三行文字 */
+    -webkit-box-orient: vertical;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+/* 頁腳樣式 */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #2a2a2a;
+    color: #aaa;
+    font-size: 14px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* 響應式設計 (RWD) - 讓網頁在不同螢幕尺寸下顯示良好 */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* 小螢幕時導航欄垂直排列 */
+        padding: 10px;
+    }
+
+    .navbar-left, .navbar-right {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .main-menu ul {
+        flex-wrap: wrap; /* 選單項目換行 */
+        justify-content: center;
+    }
+
+    .main-menu li {
+        margin: 5px 10px;
+    }
+
+    .search-box {
+        width: 90%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .btn, .btn-icon {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr; /* 小螢幕時單列顯示 */
+    }
+}
