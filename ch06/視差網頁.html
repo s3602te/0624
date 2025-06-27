@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡單的視差滾動範例</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            /* 前景文字顏色 */
+        }
+
+        /* 視差區塊的基本設定 */
+        .parallax-section {
+            height: 100vh;
+            /* 佔滿整個視窗高度 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 3em;
+            color: white;
+            position: relative;
+            /* 確保內容位於背景之上 */
+            overflow: hidden;
+            /* 防止背景圖片溢出 */
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            /* 覆蓋整個區塊 */
+            background-attachment: fixed;
+            /* 讓背景圖片固定，這是視差的關鍵！ */
+        }
+
+        /* 每個視差區塊的背景圖片 */
+        .parallax-section.section-1 {
+            background-image: url('https://picsum.photos/id/200/1920/1080');
+            /* 山景 */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* 半透明遮罩 */
+            background-blend-mode: overlay;
+            /* 混合模式 */
+        }
+
+        .parallax-section.section-2 {
+            background-image: url('https://picsum.photos/id/210/1920/1080');
+            /* 森林 */
+            background-color: rgba(0, 0, 0, 0.5);
+            background-blend-mode: overlay;
+        }
+
+        .parallax-section.section-3 {
+            background-image: url('https://picsum.photos/id/220/1920/1080');
+            /* 海邊 */
+            background-color: rgba(0, 0, 0, 0.5);
+            background-blend-mode: overlay;
+        }
+
+        /* 普通內容區塊 */
+        .content-section {
+            height: 80vh;
+            /* 讓內容區塊有一定高度，方便滾動 */
+            background-color: #f0f0f0;
+            /* 淺灰色背景 */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            text-align: center;
+            padding: 50px 20px;
+            box-sizing: border-box;
+        }
+
+        .content-section p {
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        /* 標題樣式 */
+        h1 {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 40px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="parallax-section section-1">
+        <h1>探索奇妙的世界</h1>
+    </div>
+
+    <div class="content-section">
+        <p>視差滾動讓網頁內容更具層次感。當您滾動頁面時，背景圖像看起來會比前景內容移動得慢，營造出深度的錯覺。這種效果在網站設計中越來越受歡迎，因為它能夠提供更豐富、更沉浸式的用戶體驗。</p>
+    </div>
+
+    <div class="parallax-section section-2">
+        <h1>層次豐富的視覺體驗</h1>
+    </div>
+
+    <div class="content-section">
+        <p>這種視覺效果的奧秘在於背景圖像的 `background-attachment: fixed;`
+            屬性。這使得背景圖像相對於視窗固定，而頁面上的其他內容（例如文字和普通圖片）則按正常方式滾動，從而產生了我們所看到的視差效果。</p>
+    </div>
+
+    <div class="parallax-section section-3">
+        <h1>讓你的故事動起來</h1>
+    </div>
+
+    <div class="content-section">
+        <p>視差滾動不僅僅是視覺上的吸引力，它還可以有效地引導用戶的注意力，並在敘事性網站中發揮巨大作用，逐步展示內容，增加用戶的參與度。它將簡單的滾動行為轉化為一個引人入勝的旅程。</p>
+    </div>
+
+    <div class="content-section" style="background-color: #333; color: white;">
+        <p>感謝您的體驗！希望這個簡單的範例能幫助您理解視差滾動的魅力。</p>
+    </div>
+
+</body>
+
+</html>
